@@ -3,397 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aceros y Perfiles Ferretería El Constructor | Quito Ecuador</title>
-    <meta name="description" content="Ferretería líder en venta de aceros, perfiles, vigas, tubos y materiales de construcción en Quito. 38 años de experiencia. Asesoramiento técnico profesional.">
-    <meta name="keywords" content="ferretería, aceros, perfiles, vigas, tubos, tejas, Quito, construcción, Ecuador">
-    <link rel="icon" href="logo.png">
+    <title>Ferretería El Constructor - Aceros y Perfiles Quito</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: #f8f9fa;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Arial', sans-serif; background: #f5f5f5; color: #333; }
+        
         /* HEADER */
         header {
             background: linear-gradient(135deg, #111 0%, #222 100%);
             color: white;
-            padding: 15px 40px;
+            padding: 20px 40px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             position: sticky;
             top: 0;
             z-index: 100;
         }
-
-        header img {
-            height: 60px;
-            width: auto;
-        }
-
-        nav {
-            display: flex;
-            gap: 30px;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: 600;
-            transition: color 0.3s;
-        }
-
-        nav a:hover {
-            color: #FF6600;
-        }
-
+        
+        header h1 { font-size: 24px; }
+        nav { display: flex; gap: 30px; }
+        nav a { color: white; text-decoration: none; transition: 0.3s; }
+        nav a:hover { color: #DC143C; }
+        
         /* BANNER */
         .banner {
             background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
-                        url('https://imgplaceholder.com/1920x600/FF6600/FFFFFF?text=Aceros+y+Perfiles') center/cover;
-            height: 600px;
+                        url('https://images.unsplash.com/photo-1586671213894-c09ab10c3e47?w=1200') center/cover;
+            height: 500px;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
             color: white;
-            position: relative;
         }
-
-        .banner-content h1 {
-            font-size: 60px;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-        }
-
-        .banner-content p {
-            font-size: 24px;
-            margin-bottom: 30px;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
-        }
-
-        .btn-primary {
-            background: #FF6600;
+        
+        .banner h2 { font-size: 50px; margin-bottom: 20px; }
+        .banner p { font-size: 20px; margin-bottom: 30px; }
+        
+        .btn {
+            background: #DC143C;
             color: white;
-            padding: 18px 40px;
+            padding: 15px 40px;
             text-decoration: none;
-            border-radius: 8px;
-            font-weight: 700;
-            font-size: 18px;
-            display: inline-block;
-            transition: all 0.3s;
-            box-shadow: 0 4px 15px rgba(255, 102, 0, 0.3);
+            border-radius: 5px;
+            font-weight: bold;
+            transition: 0.3s;
         }
-
-        .btn-primary:hover {
-            background: #e55a00;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(255, 102, 0, 0.4);
-        }
-
+        
+        .btn:hover { background: #b01040; }
+        
         /* SECCIONES */
         section {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 80px 20px;
+            padding: 60px 20px;
         }
-
+        
         h2 {
             text-align: center;
-            font-size: 45px;
-            margin-bottom: 50px;
-            color: #111;
-            position: relative;
-            padding-bottom: 20px;
+            font-size: 40px;
+            margin-bottom: 40px;
+            color: #DC143C;
+            border-bottom: 3px solid #FFD700;
+            padding-bottom: 15px;
         }
-
-        h2::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background: #FF6600;
-            border-radius: 2px;
-        }
-
-        /* HISTORIA */
-        .historia-content {
-            background: white;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-        }
-
-        .historia-content p {
-            font-size: 16px;
-            margin-bottom: 20px;
-            text-align: justify;
-            color: #555;
-        }
-
-        .historia-content h3 {
-            color: #FF6600;
-            margin-top: 30px;
-            margin-bottom: 15px;
-            font-size: 24px;
-        }
-
-        /* SERVICIOS */
-        .servicios-grid {
+        
+        /* GRID */
+        .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
         }
-
-        .servicio-card {
-            background: white;
-            padding: 40px 30px;
-            border-radius: 10px;
-            text-align: center;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-            transition: all 0.3s;
-        }
-
-        .servicio-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 8px 30px rgba(255, 102, 0, 0.15);
-        }
-
-        .servicio-card h3 {
-            color: #FF6600;
-            font-size: 24px;
-            margin-bottom: 15px;
-        }
-
-        .servicio-card p {
-            color: #666;
-            font-size: 15px;
-        }
-
-        /* PRODUCTOS */
-        .productos-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-        }
-
-        .producto-card {
-            background: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-            transition: all 0.3s;
-        }
-
-        .producto-card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
-        }
-
-        .producto-card img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-        }
-
-        .producto-info {
-            padding: 20px;
-        }
-
-        .producto-info h3 {
-            color: #111;
-            margin-bottom: 10px;
-            font-size: 20px;
-        }
-
-        .producto-info p {
-            color: #666;
-            font-size: 14px;
-            line-height: 1.5;
-        }
-
-        /* GALERÍA */
-        .galeria-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-
-        .galeria-item {
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-            transition: all 0.3s;
-        }
-
-        .galeria-item:hover {
-            transform: scale(1.05);
-        }
-
-        .galeria-item img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            display: block;
-        }
-
-        /* TESTIMONIOS */
-        .testimonios-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .testimonio-card {
+        
+        .card {
             background: white;
             padding: 30px;
-            border-radius: 10px;
-            border-left: 5px solid #FF6600;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
         }
-
-        .testimonio-card p {
-            color: #666;
-            font-size: 15px;
-            margin-bottom: 15px;
-            font-style: italic;
+        
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(220, 20, 60, 0.2);
         }
-
-        .testimonio-autor {
-            font-weight: 700;
-            color: #111;
-            font-size: 16px;
-        }
-
-        .testimonio-cargo {
-            color: #FF6600;
-            font-size: 13px;
-            margin-top: 5px;
-        }
-
+        
+        .card h3 { color: #DC143C; margin-bottom: 15px; }
+        .card img { width: 100%; height: 200px; object-fit: cover; border-radius: 5px; }
+        
         /* CONTACTO */
-        .contacto-container {
+        .contacto {
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .info {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 40px;
-            align-items: start;
+            margin-top: 30px;
         }
-
-        .info-contacto {
-            background: white;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-        }
-
-        .info-item {
-            margin-bottom: 30px;
-            padding-bottom: 30px;
-            border-bottom: 1px solid #eee;
-        }
-
-        .info-item:last-child {
-            border-bottom: none;
-            margin-bottom: 0;
-            padding-bottom: 0;
-        }
-
-        .info-item h4 {
-            color: #FF6600;
-            font-size: 18px;
-            margin-bottom: 10px;
-        }
-
-        .info-item p {
-            color: #666;
-            font-size: 16px;
-        }
-
-        form {
-            background: white;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        input, textarea {
-            width: 100%;
-            padding: 15px;
-            border: 2px solid #eee;
-            border-radius: 8px;
-            font-family: inherit;
-            font-size: 15px;
-            transition: border 0.3s;
-        }
-
-        input:focus, textarea:focus {
-            outline: none;
-            border-color: #FF6600;
-        }
-
-        textarea {
-            resize: vertical;
-            min-height: 120px;
-        }
-
-        button {
-            background: #FF6600;
-            color: white;
-            padding: 15px 40px;
-            border: none;
-            border-radius: 8px;
-            font-size: 16px;
-            font-weight: 700;
-            cursor: pointer;
-            transition: all 0.3s;
-            width: 100%;
-        }
-
-        button:hover {
-            background: #e55a00;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(255, 102, 0, 0.3);
-        }
-
-        /* MAPA */
-        .mapa-container {
-            margin-top: 40px;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-        }
-
-        iframe {
-            width: 100%;
-            height: 400px;
-            border: none;
-        }
-
+        
+        .info-item { margin-bottom: 20px; }
+        .info-item h4 { color: #DC143C; margin-bottom: 5px; }
+        
+        form { display: flex; flex-direction: column; gap: 15px; }
+        input, textarea { padding: 12px; border: 1px solid #ddd; border-radius: 5px; }
+        button { background: #DC143C; color: white; padding: 12px; border: none; border-radius: 5px; font-weight: bold; cursor: pointer; }
+        button:hover { background: #b01040; }
+        
         /* FOOTER */
         footer {
             background: linear-gradient(135deg, #111 0%, #222 100%);
             color: white;
             text-align: center;
-            padding: 30px;
-            margin-top: 50px;
+            padding: 20px;
+            margin-top: 40px;
         }
-
+        
         /* WHATSAPP */
         .whatsapp {
             position: fixed;
@@ -407,51 +137,23 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 32px;
+            font-size: 28px;
             text-decoration: none;
             box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-            transition: all 0.3s;
             z-index: 99;
         }
-
-        .whatsapp:hover {
-            transform: scale(1.1);
-            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
-        }
-
-        /* RESPONSIVE */
-        @media (max-width: 768px) {
-            nav {
-                flex-direction: column;
-                gap: 10px;
-            }
-
-            .banner-content h1 {
-                font-size: 36px;
-            }
-
-            .banner-content p {
-                font-size: 18px;
-            }
-
-            .contacto-container {
-                grid-template-columns: 1fr;
-            }
-
-            h2 {
-                font-size: 32px;
-            }
-        }
+        
+        .whatsapp:hover { transform: scale(1.1); }
     </style>
 </head>
 <body>
 
 <!-- HEADER -->
 <header>
-    <img src="https://imgplaceholder.com/200x200/FF6600/FFFFFF?text=El+Constructor&v=2" alt="Logo">
+    <h1>🏗️ Ferretería El Constructor</h1>
     <nav>
         <a href="#inicio">Inicio</a>
-        <a href="#historia">Nosotros</a>
+        <a href="#nosotros">Nosotros</a>
         <a href="#servicios">Servicios</a>
         <a href="#productos">Productos</a>
         <a href="#galeria">Galería</a>
@@ -460,69 +162,51 @@
 </header>
 
 <!-- BANNER -->
-<section class="banner" id="inicio">
-    <div class="banner-content">
-        <h1>Aceros y Perfiles Ferretería El Constructor</h1>
-        <p>38 años liderando la construcción en Quito</p>
-        <a href="#productos" class="btn-primary">Ver Catálogo</a>
+<div class="banner" id="inicio">
+    <div>
+        <h2>Aceros y Perfiles El Constructor</h2>
+        <p>38 años sirviendo a Quito con calidad y profesionalismo</p>
+        <a href="#productos" class="btn">Ver Catálogo</a>
     </div>
-</section>
+</div>
 
-<!-- HISTORIA -->
-<section id="historia">
-    <h2>Nuestra Historia</h2>
-    <div class="historia-content">
-        <p>
-            Con casi cuatro décadas de trayectoria, Aceros y Perfiles Ferretería El Constructor se ha consolidado como un referente en el sector de la construcción en Quito. Nuestra estructura organizacional combina experiencia técnica e innovación para adaptarnos a un mercado en constante evolución.
-        </p>
-        <p>
-            Más que proveedores, somos aliados estratégicos para nuestros clientes. Nuestro equipo brinda asesoramiento técnico especializado para ofrecer soluciones eficientes, materiales de alta calidad y precios competitivos.
-        </p>
-        
-        <h3>Misión</h3>
-        <p>
-            Proveer aceros, perfiles metálicos y materiales de construcción de alta calidad con precios competitivos, brindando asesoramiento técnico especializado y soluciones confiables para proyectos residenciales e industriales.
-        </p>
-
-        <h3>Visión</h3>
-        <p>
-            Ser la ferretería líder en distribución de aceros y materiales de construcción en Ecuador, destacándonos por innovación, calidad y confianza en cada proyecto.
-        </p>
-
-        <h3>Valores</h3>
-        <p>
-            Integridad, Excelencia, Compromiso, Innovación y Sostenibilidad son los pilares que guían cada una de nuestras acciones.
-        </p>
+<!-- NOSOTROS -->
+<section id="nosotros">
+    <h2>Sobre Nosotros</h2>
+    <div class="card">
+        <p>Con 38 años de experiencia, somos la ferretería líder en venta de aceros, perfiles metálicos y materiales de construcción en Quito. Nuestro equipo profesional está siempre listo para asesorarte.</p>
+        <p style="margin-top: 15px;"><strong>Misión:</strong> Proveer materiales de construcción de alta calidad con precios competitivos.</p>
+        <p style="margin-top: 10px;"><strong>Visión:</strong> Ser la ferretería más confiable de Ecuador.</p>
     </div>
 </section>
 
 <!-- SERVICIOS -->
 <section id="servicios">
     <h2>Nuestros Servicios</h2>
-    <div class="servicios-grid">
-        <div class="servicio-card">
+    <div class="grid">
+        <div class="card">
             <h3>🔧 Dobladora de Acero</h3>
-            <p>Servicio profesional de doblado de acero para proyectos estructurales con precisión garantizada.</p>
+            <p>Servicio profesional de doblado con precisión garantizada.</p>
         </div>
-        <div class="servicio-card">
-            <h3>📦 Venta de Aceros y Perfiles</h3>
-            <p>Distribución de vigas, tubos, correas, láminas y estructuras metálicas de alta calidad.</p>
+        <div class="card">
+            <h3>📦 Venta de Materiales</h3>
+            <p>Amplio catálogo de aceros, vigas, tubos y perfiles.</p>
         </div>
-        <div class="servicio-card">
-            <h3>👨‍🔧 Asesoramiento Técnico</h3>
-            <p>Nuestro equipo experto ayuda a seleccionar los mejores materiales para tu obra.</p>
+        <div class="card">
+            <h3>👨‍🔧 Asesoramiento</h3>
+            <p>Expertos listos para ayudarte a elegir los mejores materiales.</p>
         </div>
-        <div class="servicio-card">
+        <div class="card">
             <h3>🚚 Entrega Rápida</h3>
-            <p>Servicio de entrega ágil en Quito y zonas aledañas con logística optimizada.</p>
+            <p>Distribución ágil en Quito y zonas aledañas.</p>
         </div>
-        <div class="servicio-card">
+        <div class="card">
             <h3>💰 Precios Competitivos</h3>
-            <p>Ofertas especiales y descuentos por volumen para proyectos grandes.</p>
+            <p>Ofertas especiales y descuentos por volumen.</p>
         </div>
-        <div class="servicio-card">
-            <h3>🛡️ Garantía de Calidad</h3>
-            <p>Todos nuestros productos cuentan con certificaciones y garantía de calidad.</p>
+        <div class="card">
+            <h3>🛡️ Garantía</h3>
+            <p>Todos nuestros productos con certificación de calidad.</p>
         </div>
     </div>
 </section>
@@ -530,48 +214,36 @@
 <!-- PRODUCTOS -->
 <section id="productos">
     <h2>Catálogo de Productos</h2>
-    <div class="productos-grid">
-        <div class="producto-card">
-            <img src="https://imgplaceholder.com/300x250/FF6600/FFFFFF?text=Tejas+PVC&v=2" alt="Tejas PVC">
-            <div class="producto-info">
-                <h3>Tejas Importadas PVC</h3>
-                <p>Tejas de alta resistencia, impermeables y duraderas. Ideal para techumbre moderna.</p>
-            </div>
+    <div class="grid">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=400" alt="Tejas">
+            <h3>Tejas PVC</h3>
+            <p>Tejas importadas de alta resistencia e impermeables.</p>
         </div>
-        <div class="producto-card">
-            <img src="https://imgplaceholder.com/300x250/FF6600/FFFFFF?text=Vigas+Acero&v=2" alt="Vigas de Acero">
-            <div class="producto-info">
-                <h3>Vigas de Acero</h3>
-                <p>Vigas estructurales de acero galvanizado. Resistencia certificada para proyectos.</p>
-            </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1504917595217-3404ee9c6e68?w=400" alt="Vigas">
+            <h3>Vigas de Acero</h3>
+            <p>Vigas estructurales galvanizadas certificadas.</p>
         </div>
-        <div class="producto-card">
-            <img src="https://imgplaceholder.com/300x250/FF6600/FFFFFF?text=Tubos+Estructurales&v=2" alt="Tubos">
-            <div class="producto-info">
-                <h3>Tubos Estructurales</h3>
-                <p>Tubos de acero de alta resistencia para estructuras de construcción.</p>
-            </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1541123603104-802b8b63266b?w=400" alt="Tubos">
+            <h3>Tubos Estructurales</h3>
+            <p>Tubos de acero de alta resistencia.</p>
         </div>
-        <div class="producto-card">
-            <img src="https://imgplaceholder.com/300x250/FF6600/FFFFFF?text=Correas+Metalicas&v=2" alt="Correas">
-            <div class="producto-info">
-                <h3>Correas Metálicas</h3>
-                <p>Correas metálicas galvanizadas para estructuras de techumbre.</p>
-            </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1516534775068-bb57b6439066?w=400" alt="Correas">
+            <h3>Correas Metálicas</h3>
+            <p>Correas galvanizadas para techumbre.</p>
         </div>
-        <div class="producto-card">
-            <img src="https://imgplaceholder.com/300x250/FF6600/FFFFFF?text=Laminados+Acero&v=2" alt="Laminados">
-            <div class="producto-info">
-                <h3>Laminados de Acero</h3>
-                <p>Láminas de acero para múltiples aplicaciones en construcción.</p>
-            </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1578071284219-4b5e6f5fcf73?w=400" alt="Laminados">
+            <h3>Laminados de Acero</h3>
+            <p>Láminas para múltiples aplicaciones.</p>
         </div>
-        <div class="producto-card">
-            <img src="https://imgplaceholder.com/300x250/FF6600/FFFFFF?text=Pernos+Tuercas&v=2" alt="Pernos">
-            <div class="producto-info">
-                <h3>Pernos y Tuercas</h3>
-                <p>Pernos y tuercas de acero galvanizado para construcción.</p>
-            </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1607614382346-f0fb9c5618b7?w=400" alt="Pernos">
+            <h3>Pernos y Tuercas</h3>
+            <p>Pernos galvanizados de calidad premium.</p>
         </div>
     </div>
 </section>
@@ -579,101 +251,77 @@
 <!-- GALERÍA -->
 <section id="galeria">
     <h2>Galería de Proyectos</h2>
-    <div class="galeria-grid">
-        <div class="galeria-item">
-            <img src="https://imgplaceholder.com/300x200/FF6600/FFFFFF?text=Proyecto+1&v=2" alt="Proyecto 1">
-        </div>
-        <div class="galeria-item">
-            <img src="https://imgplaceholder.com/300x200/FF6600/FFFFFF?text=Proyecto+2&v=2" alt="Proyecto 2">
-        </div>
-        <div class="galeria-item">
-            <img src="https://imgplaceholder.com/300x200/FF6600/FFFFFF?text=Proyecto+3&v=2" alt="Proyecto 3">
-        </div>
-        <div class="galeria-item">
-            <img src="https://imgplaceholder.com/300x200/FF6600/FFFFFF?text=Proyecto+4&v=2" alt="Proyecto 4">
-        </div>
-        <div class="galeria-item">
-            <img src="https://imgplaceholder.com/300x200/FF6600/FFFFFF?text=Proyecto+5&v=2" alt="Proyecto 5">
-        </div>
-        <div class="galeria-item">
-            <img src="https://imgplaceholder.com/300x200/FF6600/FFFFFF?text=Proyecto+6&v=2" alt="Proyecto 6">
-        </div>
+    <div class="grid">
+        <img src="https://images.unsplash.com/photo-1586671213894-c09ab10c3e47?w=400" alt="Proyecto 1" style="width: 100%; height: 250px; object-fit: cover; border-radius: 8px;">
+        <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=400" alt="Proyecto 2" style="width: 100%; height: 250px; object-fit: cover; border-radius: 8px;">
+        <img src="https://images.unsplash.com/photo-1504917595217-3404ee9c6e68?w=400" alt="Proyecto 3" style="width: 100%; height: 250px; object-fit: cover; border-radius: 8px;">
+        <img src="https://images.unsplash.com/photo-1541123603104-802b8b63266b?w=400" alt="Proyecto 4" style="width: 100%; height: 250px; object-fit: cover; border-radius: 8px;">
+        <img src="https://images.unsplash.com/photo-1516534775068-bb57b6439066?w=400" alt="Proyecto 5" style="width: 100%; height: 250px; object-fit: cover; border-radius: 8px;">
+        <img src="https://images.unsplash.com/photo-1578071284219-4b5e6f5fcf73?w=400" alt="Proyecto 6" style="width: 100%; height: 250px; object-fit: cover; border-radius: 8px;">
     </div>
 </section>
 
 <!-- TESTIMONIOS -->
 <section>
     <h2>Testimonios de Clientes</h2>
-    <div class="testimonios-grid">
-        <div class="testimonio-card">
-            <p>"Excelente calidad en los materiales y atención profesional. Recomendados para cualquier proyecto de construcción."</p>
-            <div class="testimonio-autor">Ing. Carlos Mejía</div>
-            <div class="testimonio-cargo">Contratista General</div>
+    <div class="grid">
+        <div class="card">
+            <p>"Excelente calidad y atención profesional. Los recomiendo ampliamente."</p>
+            <p><strong>- Ing. Carlos Mejía</strong></p>
+            <p style="color: #DC143C; font-size: 14px;">Contratista General</p>
         </div>
-        <div class="testimonio-card">
-            <p>"Los precios son muy competitivos y el servicio de entrega es rápido. Definitivamente volveré a comprar."</p>
-            <div class="testimonio-autor">Juan Rodríguez</div>
-            <div class="testimonio-cargo">Empresa Constructora</div>
+        <div class="card">
+            <p>"Precios competitivos y entrega rápida. Muy satisfecho con el servicio."</p>
+            <p><strong>- Juan Rodríguez</strong></p>
+            <p style="color: #DC143C; font-size: 14px;">Empresa Constructora</p>
         </div>
-        <div class="testimonio-card">
-            <p>"El asesoramiento técnico fue fundamental para elegir los materiales correctos. Muy profesionales."</p>
-            <div class="testimonio-autor">María González</div>
-            <div class="testimonio-cargo">Arquitecta</div>
+        <div class="card">
+            <p>"El asesoramiento técnico fue fundamental. Equipo muy profesional."</p>
+            <p><strong>- María González</strong></p>
+            <p style="color: #DC143C; font-size: 14px;">Arquitecta</p>
         </div>
     </div>
 </section>
 
 <!-- CONTACTO -->
 <section id="contacto">
-    <h2>Contacto y Ubicación</h2>
-    <div class="contacto-container">
-        <div class="info-contacto">
-            <div class="info-item">
-                <h4>📞 Teléfono</h4>
-                <p><a href="tel:+593998402264" style="color:#FF6600; text-decoration:none;">099 840 2264</a></p>
+    <h2>Contáctanos</h2>
+    <div class="contacto">
+        <div class="info">
+            <div>
+                <div class="info-item">
+                    <h4>📞 Teléfono</h4>
+                    <p><a href="tel:+593998402264" style="color: #DC143C; text-decoration: none;">099 840 2264</a></p>
+                </div>
+                <div class="info-item">
+                    <h4>📧 Email</h4>
+                    <p><a href="mailto:ferreteriaelconstructor54@gmail.com" style="color: #DC143C; text-decoration: none;">ferreteriaelconstructor54@gmail.com</a></p>
+                </div>
+                <div class="info-item">
+                    <h4>📍 Dirección</h4>
+                    <p>MFR4+H46, Quito 170146, Ecuador</p>
+                </div>
+                <div class="info-item">
+                    <h4>🕐 Horarios</h4>
+                    <p><strong>Lunes - Viernes:</strong> 8:00 - 17:00</p>
+                    <p><strong>Sábado:</strong> 9:00 - 13:00</p>
+                </div>
             </div>
-            <div class="info-item">
-                <h4>📧 Email</h4>
-                <p><a href="mailto:ferreteriaelconstructor54@gmail.com" style="color:#FF6600; text-decoration:none;">ferreteriaelconstructor54@gmail.com</a></p>
-            </div>
-            <div class="info-item">
-                <h4>📍 Dirección</h4>
-                <p>MFR4+H46, Quito 170146, Ecuador</p>
-            </div>
-            <div class="info-item">
-                <h4>🕐 Horarios de Atención</h4>
-                <p><strong>Lunes - Viernes:</strong> 8:00 - 17:00</p>
-                <p><strong>Sábado:</strong> 9:00 - 13:00</p>
-                <p><strong>Domingo:</strong> Cerrado</p>
-            </div>
-        </div>
-
-        <form>
-            <div class="form-group">
+            <form>
                 <input type="text" placeholder="Nombre completo" required>
-            </div>
-            <div class="form-group">
                 <input type="email" placeholder="Correo electrónico" required>
-            </div>
-            <div class="form-group">
-                <input type="tel" placeholder="Teléfono de contacto" required>
-            </div>
-            <div class="form-group">
-                <textarea placeholder="Mensaje o consulta de productos" required></textarea>
-            </div>
-            <button type="submit">Enviar Cotización</button>
-        </form>
-    </div>
-
-    <div class="mapa-container">
-        <iframe src="https://maps.google.com/maps?q=MFR4+H46+Quito&t=&z=15&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy"></iframe>
+                <input type="tel" placeholder="Teléfono" required>
+                <textarea placeholder="Mensaje o consulta" rows="5" required></textarea>
+                <button type="submit">Enviar Consulta</button>
+            </form>
+        </div>
     </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-    <p>&copy; 2026 Aceros y Perfiles Ferretería El Constructor. Todos los derechos reservados.</p>
-    <p>Diseño profesional | Asesoramiento técnico | Calidad garantizada</p>
+    <p>&copy; 2026 Ferretería El Constructor. Todos los derechos reservados.</p>
+    <p>Diseño profesional | Calidad garantizada | Atención al cliente</p>
 </footer>
 
 <!-- WHATSAPP -->
