@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -21,6 +21,7 @@
             z-index: 100;
         }
         
+        header img { height: 60px; width: auto; border-radius: 50%; }
         header h1 { font-size: 24px; }
         nav { display: flex; gap: 30px; }
         nav a { color: white; text-decoration: none; transition: 0.3s; }
@@ -28,8 +29,8 @@
         
         /* BANNER */
         .banner {
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
-                        url('https://images.unsplash.com/photo-1586671213894-c09ab10c3e47?w=1200') center/cover;
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+                        url('https://images.unsplash.com/photo-1586671213894-c09ab10c3e47?w=1200&h=500&fit=crop') center/cover;
             height: 500px;
             display: flex;
             align-items: center;
@@ -49,6 +50,7 @@
             border-radius: 5px;
             font-weight: bold;
             transition: 0.3s;
+            display: inline-block;
         }
         
         .btn:hover { background: #b01040; }
@@ -90,7 +92,7 @@
         }
         
         .card h3 { color: #DC143C; margin-bottom: 15px; }
-        .card img { width: 100%; height: 200px; object-fit: cover; border-radius: 5px; }
+        .card img { width: 100%; height: 200px; object-fit: cover; border-radius: 5px; margin-bottom: 15px; }
         
         /* CONTACTO */
         .contacto {
@@ -111,7 +113,7 @@
         .info-item h4 { color: #DC143C; margin-bottom: 5px; }
         
         form { display: flex; flex-direction: column; gap: 15px; }
-        input, textarea { padding: 12px; border: 1px solid #ddd; border-radius: 5px; }
+        input, textarea { padding: 12px; border: 1px solid #ddd; border-radius: 5px; font-family: Arial; }
         button { background: #DC143C; color: white; padding: 12px; border: none; border-radius: 5px; font-weight: bold; cursor: pointer; }
         button:hover { background: #b01040; }
         
@@ -141,15 +143,23 @@
             text-decoration: none;
             box-shadow: 0 4px 15px rgba(0,0,0,0.2);
             z-index: 99;
+            transition: transform 0.3s;
         }
         
         .whatsapp:hover { transform: scale(1.1); }
+
+        @media (max-width: 768px) {
+            nav { flex-direction: column; gap: 10px; }
+            .banner h2 { font-size: 32px; }
+            .info { grid-template-columns: 1fr; }
+        }
     </style>
 </head>
 <body>
 
 <!-- HEADER -->
 <header>
+    <img src="https://via.placeholder.com/200x200/DC143C/FFFFFF?text=EC" alt="Logo El Constructor">
     <h1>🏗️ Ferretería El Constructor</h1>
     <nav>
         <a href="#inicio">Inicio</a>
@@ -174,9 +184,9 @@
 <section id="nosotros">
     <h2>Sobre Nosotros</h2>
     <div class="card">
-        <p>Con 38 años de experiencia, somos la ferretería líder en venta de aceros, perfiles metálicos y materiales de construcción en Quito. Nuestro equipo profesional está siempre listo para asesorarte.</p>
-        <p style="margin-top: 15px;"><strong>Misión:</strong> Proveer materiales de construcción de alta calidad con precios competitivos.</p>
-        <p style="margin-top: 10px;"><strong>Visión:</strong> Ser la ferretería más confiable de Ecuador.</p>
+        <p>Con 38 años de experiencia, somos la ferretería líder en venta de aceros, perfiles metálicos y materiales de construcción en Quito. Nuestro equipo profesional está siempre listo para asesorarte con las mejores soluciones para tu proyecto.</p>
+        <p style="margin-top: 15px;"><strong>Misión:</strong> Proveer materiales de construcción de alta calidad con precios competitivos y asesoramiento técnico especializado.</p>
+        <p style="margin-top: 10px;"><strong>Visión:</strong> Ser la ferretería más confiable de Ecuador en venta de aceros y perfiles metálicos.</p>
     </div>
 </section>
 
@@ -186,27 +196,27 @@
     <div class="grid">
         <div class="card">
             <h3>🔧 Dobladora de Acero</h3>
-            <p>Servicio profesional de doblado con precisión garantizada.</p>
+            <p>Servicio profesional de doblado con precisión garantizada para tus proyectos estructurales.</p>
         </div>
         <div class="card">
             <h3>📦 Venta de Materiales</h3>
-            <p>Amplio catálogo de aceros, vigas, tubos y perfiles.</p>
+            <p>Amplio catálogo de aceros, vigas, tubos, perfiles y más materiales de construcción.</p>
         </div>
         <div class="card">
-            <h3>👨‍🔧 Asesoramiento</h3>
-            <p>Expertos listos para ayudarte a elegir los mejores materiales.</p>
+            <h3>👨‍🔧 Asesoramiento Técnico</h3>
+            <p>Expertos listos para ayudarte a elegir los mejores materiales para tu obra.</p>
         </div>
         <div class="card">
             <h3>🚚 Entrega Rápida</h3>
-            <p>Distribución ágil en Quito y zonas aledañas.</p>
+            <p>Distribución ágil y segura en Quito y zonas aledañas.</p>
         </div>
         <div class="card">
             <h3>💰 Precios Competitivos</h3>
-            <p>Ofertas especiales y descuentos por volumen.</p>
+            <p>Ofertas especiales y descuentos por volumen para proyectos grandes.</p>
         </div>
         <div class="card">
-            <h3>🛡️ Garantía</h3>
-            <p>Todos nuestros productos con certificación de calidad.</p>
+            <h3>🛡️ Garantía de Calidad</h3>
+            <p>Todos nuestros productos con certificación y garantía de calidad comprobada.</p>
         </div>
     </div>
 </section>
@@ -216,34 +226,34 @@
     <h2>Catálogo de Productos</h2>
     <div class="grid">
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=400" alt="Tejas">
-            <h3>Tejas PVC</h3>
-            <p>Tejas importadas de alta resistencia e impermeables.</p>
+            <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=400&h=250&fit=crop" alt="Tejas PVC">
+            <h3>Tejas PVC Importadas</h3>
+            <p>Tejas de alta resistencia, impermeables y duraderas. Ideal para techumbre moderna con garantía de calidad.</p>
         </div>
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1504917595217-3404ee9c6e68?w=400" alt="Vigas">
-            <h3>Vigas de Acero</h3>
-            <p>Vigas estructurales galvanizadas certificadas.</p>
+            <img src="https://images.unsplash.com/photo-1504917595217-3404ee9c6e68?w=400&h=250&fit=crop" alt="Vigas de Acero">
+            <h3>Vigas de Acero Estructurales</h3>
+            <p>Vigas galvanizadas certificadas con resistencia garantizada para proyectos de construcción.</p>
         </div>
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1541123603104-802b8b63266b?w=400" alt="Tubos">
+            <img src="https://images.unsplash.com/photo-1541123603104-802b8b63266b?w=400&h=250&fit=crop" alt="Tubos Estructurales">
             <h3>Tubos Estructurales</h3>
-            <p>Tubos de acero de alta resistencia.</p>
+            <p>Tubos de acero de alta resistencia para estructuras de construcción e instalaciones industriales.</p>
         </div>
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1516534775068-bb57b6439066?w=400" alt="Correas">
-            <h3>Correas Metálicas</h3>
-            <p>Correas galvanizadas para techumbre.</p>
+            <img src="https://images.unsplash.com/photo-1516534775068-bb57b6439066?w=400&h=250&fit=crop" alt="Correas Metálicas">
+            <h3>Correas Metálicas Galvanizadas</h3>
+            <p>Correas galvanizadas profesionales para estructuras de techumbre y construcción.</p>
         </div>
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1578071284219-4b5e6f5fcf73?w=400" alt="Laminados">
+            <img src="https://images.unsplash.com/photo-1578071284219-4b5e6f5fcf73?w=400&h=250&fit=crop" alt="Laminados de Acero">
             <h3>Laminados de Acero</h3>
-            <p>Láminas para múltiples aplicaciones.</p>
+            <p>Láminas de acero de diferentes espesores para múltiples aplicaciones en construcción.</p>
         </div>
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1607614382346-f0fb9c5618b7?w=400" alt="Pernos">
-            <h3>Pernos y Tuercas</h3>
-            <p>Pernos galvanizados de calidad premium.</p>
+            <img src="https://images.unsplash.com/photo-1607614382346-f0fb9c5618b7?w=400&h=250&fit=crop" alt="Pernos y Tuercas">
+            <h3>Pernos y Tuercas Galvanizados</h3>
+            <p>Pernos y tuercas de acero galvanizado de calidad premium para construcción.</p>
         </div>
     </div>
 </section>
@@ -252,12 +262,24 @@
 <section id="galeria">
     <h2>Galería de Proyectos</h2>
     <div class="grid">
-        <img src="https://images.unsplash.com/photo-1586671213894-c09ab10c3e47?w=400" alt="Proyecto 1" style="width: 100%; height: 250px; object-fit: cover; border-radius: 8px;">
-        <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=400" alt="Proyecto 2" style="width: 100%; height: 250px; object-fit: cover; border-radius: 8px;">
-        <img src="https://images.unsplash.com/photo-1504917595217-3404ee9c6e68?w=400" alt="Proyecto 3" style="width: 100%; height: 250px; object-fit: cover; border-radius: 8px;">
-        <img src="https://images.unsplash.com/photo-1541123603104-802b8b63266b?w=400" alt="Proyecto 4" style="width: 100%; height: 250px; object-fit: cover; border-radius: 8px;">
-        <img src="https://images.unsplash.com/photo-1516534775068-bb57b6439066?w=400" alt="Proyecto 5" style="width: 100%; height: 250px; object-fit: cover; border-radius: 8px;">
-        <img src="https://images.unsplash.com/photo-1578071284219-4b5e6f5fcf73?w=400" alt="Proyecto 6" style="width: 100%; height: 250px; object-fit: cover; border-radius: 8px;">
+        <div style="background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+            <img src="https://images.unsplash.com/photo-1586671213894-c09ab10c3e47?w=400&h=250&fit=crop" alt="Proyecto 1" style="width: 100%; height: 250px; object-fit: cover;">
+        </div>
+        <div style="background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+            <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=400&h=250&fit=crop" alt="Proyecto 2" style="width: 100%; height: 250px; object-fit: cover;">
+        </div>
+        <div style="background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+            <img src="https://images.unsplash.com/photo-1504917595217-3404ee9c6e68?w=400&h=250&fit=crop" alt="Proyecto 3" style="width: 100%; height: 250px; object-fit: cover;">
+        </div>
+        <div style="background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+            <img src="https://images.unsplash.com/photo-1541123603104-802b8b63266b?w=400&h=250&fit=crop" alt="Proyecto 4" style="width: 100%; height: 250px; object-fit: cover;">
+        </div>
+        <div style="background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+            <img src="https://images.unsplash.com/photo-1516534775068-bb57b6439066?w=400&h=250&fit=crop" alt="Proyecto 5" style="width: 100%; height: 250px; object-fit: cover;">
+        </div>
+        <div style="background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+            <img src="https://images.unsplash.com/photo-1578071284219-4b5e6f5fcf73?w=400&h=250&fit=crop" alt="Proyecto 6" style="width: 100%; height: 250px; object-fit: cover;">
+        </div>
     </div>
 </section>
 
@@ -266,32 +288,32 @@
     <h2>Testimonios de Clientes</h2>
     <div class="grid">
         <div class="card">
-            <p>"Excelente calidad y atención profesional. Los recomiendo ampliamente."</p>
-            <p><strong>- Ing. Carlos Mejía</strong></p>
+            <p>"Excelente calidad en los materiales y atención profesional. Los recomiendo ampliamente para cualquier proyecto."</p>
+            <p style="margin-top: 15px;"><strong>- Ing. Carlos Mejía</strong></p>
             <p style="color: #DC143C; font-size: 14px;">Contratista General</p>
         </div>
         <div class="card">
-            <p>"Precios competitivos y entrega rápida. Muy satisfecho con el servicio."</p>
-            <p><strong>- Juan Rodríguez</strong></p>
+            <p>"Precios muy competitivos y entrega rápida. Muy satisfecho con el servicio y seguiré comprando."</p>
+            <p style="margin-top: 15px;"><strong>- Juan Rodríguez</strong></p>
             <p style="color: #DC143C; font-size: 14px;">Empresa Constructora</p>
         </div>
         <div class="card">
-            <p>"El asesoramiento técnico fue fundamental. Equipo muy profesional."</p>
-            <p><strong>- María González</strong></p>
-            <p style="color: #DC143C; font-size: 14px;">Arquitecta</p>
+            <p>"El asesoramiento técnico fue fundamental. Equipo muy profesional y atento a nuestras necesidades."</p>
+            <p style="margin-top: 15px;"><strong>- María González</strong></p>
+            <p style="color: #DC143C; font-size: 14px;">Arquitecta Profesional</p>
         </div>
     </div>
 </section>
 
 <!-- CONTACTO -->
 <section id="contacto">
-    <h2>Contáctanos</h2>
+    <h2>Contáctanos Ahora</h2>
     <div class="contacto">
         <div class="info">
             <div>
                 <div class="info-item">
                     <h4>📞 Teléfono</h4>
-                    <p><a href="tel:+593998402264" style="color: #DC143C; text-decoration: none;">099 840 2264</a></p>
+                    <p><a href="tel:+593998402264" style="color: #DC143C; text-decoration: none; font-weight: bold;">099 840 2264</a></p>
                 </div>
                 <div class="info-item">
                     <h4>📧 Email</h4>
@@ -302,16 +324,17 @@
                     <p>MFR4+H46, Quito 170146, Ecuador</p>
                 </div>
                 <div class="info-item">
-                    <h4>🕐 Horarios</h4>
+                    <h4>🕐 Horarios de Atención</h4>
                     <p><strong>Lunes - Viernes:</strong> 8:00 - 17:00</p>
                     <p><strong>Sábado:</strong> 9:00 - 13:00</p>
+                    <p><strong>Domingo:</strong> Cerrado</p>
                 </div>
             </div>
             <form>
                 <input type="text" placeholder="Nombre completo" required>
                 <input type="email" placeholder="Correo electrónico" required>
-                <input type="tel" placeholder="Teléfono" required>
-                <textarea placeholder="Mensaje o consulta" rows="5" required></textarea>
+                <input type="tel" placeholder="Teléfono de contacto" required>
+                <textarea placeholder="Mensaje o consulta de productos" rows="5" required></textarea>
                 <button type="submit">Enviar Consulta</button>
             </form>
         </div>
@@ -324,7 +347,7 @@
     <p>Diseño profesional | Calidad garantizada | Atención al cliente</p>
 </footer>
 
-<!-- WHATSAPP -->
+<!-- WHATSAPP FLOTANTE -->
 <a href="https://wa.me/593998402264" target="_blank" class="whatsapp" title="Contactar por WhatsApp">💬</a>
 
 </body>
