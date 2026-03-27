@@ -1,33 +1,540 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ferreteria El Constructor</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Aceros y Perfiles Ferretería El Constructor - Importador de tejas, vigas, tubos, correas y materiales de construcción en Quito, Ecuador. Calidad y variedad al mejor precio." />
+  <meta name="keywords" content="ferretería, aceros, perfiles, tejas, vigas, tubos, correas, laminados, Quito, Ecuador, construcción" />
+  <meta property="og:title" content="Aceros y Perfiles Ferretería El Constructor" />
+  <meta property="og:description" content="Importador de materiales de construcción en Quito, Ecuador. Tejas, vigas, tubos y más." />
+  <meta property="og:type" content="website" />
+  <title>Aceros y Perfiles Ferretería El Constructor | Quito, Ecuador</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" href="./logo.png" />
 </head>
 <body>
-    <header>
-        <img src="./logo.png" alt="Logo">
-    </header>
-    <main>
-        <section>
-            <img src="./banner.jpg" alt="Banner">
-        </section>
-        <section class="gallery">
-            <img src="./proyecto1.jpg" alt="Proyecto 1">
-            <img src="./proyecto2.jpg" alt="Proyecto 2">
-            <img src="./proyecto3.jpg" alt="Proyecto 3">
-            <img src="./proyecto4.jpg" alt="Proyecto 4">
-            <img src="./proyecto5.jpg" alt="Proyecto 5">
-            <img src="./proyecto6.jpg" alt="Proyecto 6">
-        </section>
-        <section>
-            <img src="./correa1.jpg" alt="Correa">
-            <img src="./viga1.jpg" alt="Viga">
-            <img src="./tubo1.jpg" alt="Tubo">
-            <img src="./laminado1.jpg" alt="Laminado">
-            <img src="./perno1.jpg" alt="Perno">
-        </section>
-    </main>
+
+  <!-- ============================
+       HEADER / NAVEGACIÓN
+       ============================ -->
+  <header class="header" role="banner">
+    <nav class="nav" aria-label="Navegación principal">
+      <a href="#inicio" class="nav-logo" aria-label="Inicio - Ferretería El Constructor">
+        <img src="./logo.png" alt="Logo Ferretería El Constructor" />
+        <div class="nav-logo-text">
+          <span>Ferretería El Constructor</span>
+          <span>Aceros y Perfiles</span>
+        </div>
+      </a>
+
+      <ul class="nav-menu" id="navMenu" role="menubar">
+        <li role="none"><a href="#inicio" role="menuitem">Inicio</a></li>
+        <li role="none"><a href="#nosotros" role="menuitem">Nosotros</a></li>
+        <li role="none"><a href="#productos" role="menuitem">Productos</a></li>
+        <li role="none"><a href="#servicios" role="menuitem">Servicios</a></li>
+        <li role="none"><a href="#contacto" role="menuitem">Contacto</a></li>
+        <li role="none">
+          <a href="https://wa.me/593XXXXXXXXX?text=Hola%2C%20me%20gustaría%20más%20información%20sobre%20sus%20productos"
+             class="nav-cta" role="menuitem" target="_blank" rel="noopener noreferrer">
+            💬 WhatsApp
+          </a>
+        </li>
+      </ul>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navMenu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ============================
+         HERO / BANNER
+         ============================ -->
+    <section class="hero" id="inicio" aria-label="Presentación">
+      <div class="hero-bg" role="img" aria-label="Banner de construcción"></div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <span class="hero-badge">🏗️ Quito, Ecuador</span>
+        <h1 class="hero-title">
+          Tu Proveedor de<br />
+          <span>Aceros y Perfiles</span><br />
+          de Confianza
+        </h1>
+        <p class="hero-subtitle">
+          Importadores directos de tejas, vigas, tubos, correas y materiales de construcción.
+          Calidad garantizada al mejor precio del mercado.
+        </p>
+        <div class="hero-actions">
+          <a href="#productos" class="btn btn-primary">Ver Productos</a>
+          <a href="#contacto" class="btn btn-outline">Solicitar Cotización</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================
+         STATS
+         ============================ -->
+    <section class="stats-section" aria-label="Estadísticas">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-number">10+</div>
+          <div class="stat-label">Años de experiencia</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">500+</div>
+          <div class="stat-label">Clientes satisfechos</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">50+</div>
+          <div class="stat-label">Productos disponibles</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">100%</div>
+          <div class="stat-label">Calidad garantizada</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================
+         SOBRE NOSOTROS
+         ============================ -->
+    <section class="section" id="nosotros" aria-labelledby="about-title">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-img-wrap">
+            <img src="./banner.jpg" alt="Instalaciones de Ferretería El Constructor" loading="lazy" />
+            <div class="about-img-badge">
+              <strong>10+</strong>
+              Años en el mercado
+            </div>
+          </div>
+          <div class="about-text">
+            <span class="section-tag">Quiénes somos</span>
+            <h2 id="about-title">Ferretería El Constructor — Tu Aliado en Construcción</h2>
+            <p>
+              Somos importadores y distribuidores directos de aceros, perfiles y materiales
+              de construcción en Quito, Ecuador. Nos especializamos en ofrecer productos de
+              alta calidad a precios competitivos para proyectos residenciales, comerciales
+              e industriales.
+            </p>
+            <p>
+              Contamos con una amplia gama de productos: tejas de zinc y galvanizadas, vigas
+              metálicas, tubos estructurales, correas C y Z, laminados en frío y en caliente,
+              entre muchos más. Asesoramos a nuestros clientes en la selección del material
+              adecuado para cada proyecto.
+            </p>
+            <div class="about-features">
+              <div class="about-feature">
+                <div class="about-feature-icon" aria-hidden="true">✓</div>
+                Importación directa
+              </div>
+              <div class="about-feature">
+                <div class="about-feature-icon" aria-hidden="true">✓</div>
+                Precios competitivos
+              </div>
+              <div class="about-feature">
+                <div class="about-feature-icon" aria-hidden="true">✓</div>
+                Stock permanente
+              </div>
+              <div class="about-feature">
+                <div class="about-feature-icon" aria-hidden="true">✓</div>
+                Entrega a domicilio
+              </div>
+              <div class="about-feature">
+                <div class="about-feature-icon" aria-hidden="true">✓</div>
+                Asesoramiento técnico
+              </div>
+              <div class="about-feature">
+                <div class="about-feature-icon" aria-hidden="true">✓</div>
+                Garantía de calidad
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================
+         PRODUCTOS
+         ============================ -->
+    <section class="section section-alt" id="productos" aria-labelledby="products-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Catálogo</span>
+          <h2 class="section-title" id="products-title">Nuestros <span>Productos</span></h2>
+          <div class="divider" aria-hidden="true"></div>
+          <p class="section-desc">
+            Amplia variedad de materiales de construcción de primera calidad.
+            Contamos con stock permanente para atender sus pedidos al instante.
+          </p>
+        </div>
+
+        <div class="products-grid">
+          <article class="product-card">
+            <div class="product-img">
+              <img src="./teja1.jpg" alt="Tejas de zinc y galvanizadas" loading="lazy" />
+              <span class="product-tag">Cubierta</span>
+            </div>
+            <div class="product-body">
+              <h3>Tejas Metálicas</h3>
+              <p>Tejas de zinc y galvanizadas de alto rendimiento. Resistentes a la corrosión, ideales para cubiertas residenciales e industriales.</p>
+              <a href="#contacto" class="product-link">Cotizar ahora →</a>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-img">
+              <img src="./viga1.jpg" alt="Vigas metálicas de acero" loading="lazy" />
+              <span class="product-tag">Estructura</span>
+            </div>
+            <div class="product-body">
+              <h3>Vigas de Acero</h3>
+              <p>Vigas en I, H y U para estructuras de alta resistencia. Disponibles en diferentes medidas y espesores según su proyecto.</p>
+              <a href="#contacto" class="product-link">Cotizar ahora →</a>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-img">
+              <img src="./tubo1.jpg" alt="Tubos estructurales cuadrados y rectangulares" loading="lazy" />
+              <span class="product-tag">Tubería</span>
+            </div>
+            <div class="product-body">
+              <h3>Tubos Estructurales</h3>
+              <p>Tubos cuadrados, rectangulares y redondos para estructuras metálicas. Alta resistencia y durabilidad garantizada.</p>
+              <a href="#contacto" class="product-link">Cotizar ahora →</a>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-img">
+              <img src="./correa1.jpg" alt="Correas C y Z para construcción" loading="lazy" />
+              <span class="product-tag">Perfilería</span>
+            </div>
+            <div class="product-body">
+              <h3>Correas C y Z</h3>
+              <p>Correas de acero galvanizado tipo C y Z para sistemas de cubierta y fachada. Livianas y de alta resistencia estructural.</p>
+              <a href="#contacto" class="product-link">Cotizar ahora →</a>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-img">
+              <img src="./laminado1.jpg" alt="Laminados de acero en frío y en caliente" loading="lazy" />
+              <span class="product-tag">Laminados</span>
+            </div>
+            <div class="product-body">
+              <h3>Laminados de Acero</h3>
+              <p>Planchas y láminas de acero laminadas en frío y en caliente. Versátiles para múltiples aplicaciones industriales y comerciales.</p>
+              <a href="#contacto" class="product-link">Cotizar ahora →</a>
+            </div>
+          </article>
+
+          <article class="product-card product-card--cta">
+            <div class="product-cta-icon" aria-hidden="true">📦</div>
+            <h3 class="product-cta-title">¿No encontraste lo que buscas?</h3>
+            <p class="product-cta-desc">
+              Contamos con más de 50 productos. Contáctenos y le asesoramos.
+            </p>
+            <a href="#contacto" class="btn btn-primary">Ver más productos</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================
+         SERVICIOS
+         ============================ -->
+    <section class="section" id="servicios" aria-labelledby="services-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Lo que ofrecemos</span>
+          <h2 class="section-title" id="services-title">Nuestros <span>Servicios</span></h2>
+          <div class="divider" aria-hidden="true"></div>
+          <p class="section-desc">
+            Más que vender materiales, ofrecemos soluciones integrales para su proyecto de construcción.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon" aria-hidden="true">🚚</div>
+            <h3>Entrega a Domicilio</h3>
+            <p>Llevamos sus materiales directamente a su obra en Quito y sectores aledaños. Rápido y seguro.</p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon" aria-hidden="true">✂️</div>
+            <h3>Corte a Medida</h3>
+            <p>Cortamos vigas, tubos y laminados a las medidas exactas que necesita su proyecto. Sin desperdicios.</p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon" aria-hidden="true">🔧</div>
+            <h3>Asesoramiento Técnico</h3>
+            <p>Nuestro equipo le ayuda a elegir los materiales correctos para cada tipo de estructura y presupuesto.</p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon" aria-hidden="true">💰</div>
+            <h3>Precios por Volumen</h3>
+            <p>Descuentos especiales en pedidos al por mayor. Consulte nuestras promociones para constructoras.</p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon" aria-hidden="true">📋</div>
+            <h3>Cotización Rápida</h3>
+            <p>Reciba su cotización en menos de 24 horas. Por WhatsApp, email o en nuestra tienda física.</p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon" aria-hidden="true">🏭</div>
+            <h3>Importación Directa</h3>
+            <p>Trabajamos directamente con fabricantes para garantizar la mejor calidad al menor costo posible.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================
+         CONTACTO
+         ============================ -->
+    <section class="section section-alt" id="contacto" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Contáctenos</span>
+          <h2 class="section-title" id="contact-title">Estamos para <span>Ayudarle</span></h2>
+          <div class="divider" aria-hidden="true"></div>
+          <p class="section-desc">
+            Solicite su cotización o consulta. Respondemos en menos de 24 horas.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-info">
+            <h3>Información de Contacto</h3>
+            <p>
+              Visítenos en nuestra tienda o contáctenos por cualquiera de estos medios.
+              Estamos disponibles de lunes a sábado.
+            </p>
+
+            <div class="contact-items">
+              <div class="contact-item">
+                <div class="contact-item-icon" aria-hidden="true">📍</div>
+                <div class="contact-item-text">
+                  <strong>Dirección</strong>
+                  <span>Quito, Ecuador</span>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-item-icon" aria-hidden="true">📞</div>
+                <div class="contact-item-text">
+                  <strong>Teléfono / WhatsApp</strong>
+                  <span>Contáctenos vía WhatsApp</span>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-item-icon" aria-hidden="true">✉️</div>
+                <div class="contact-item-text">
+                  <strong>Email</strong>
+                  <span>ferreteriaelconstructor54@gmail.com</span>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-item-icon" aria-hidden="true">🕐</div>
+                <div class="contact-item-text">
+                  <strong>Horario de atención</strong>
+                  <span>Lunes a Viernes: 8h00 – 18h00<br />Sábado: 8h00 – 14h00</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form">
+            <form id="contactForm" novalidate aria-label="Formulario de contacto">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name">Nombre *</label>
+                  <input type="text" id="name" name="name" placeholder="Su nombre completo" required autocomplete="name" />
+                </div>
+                <div class="form-group">
+                  <label for="phone">Teléfono *</label>
+                  <input type="tel" id="phone" name="phone" placeholder="0999 999 999" required autocomplete="tel" />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="email">Correo electrónico</label>
+                <input type="email" id="email" name="email" placeholder="su@email.com" autocomplete="email" />
+              </div>
+
+              <div class="form-group">
+                <label for="product">Producto de interés</label>
+                <select id="product" name="product">
+                  <option value="">— Seleccione un producto —</option>
+                  <option value="tejas">Tejas metálicas</option>
+                  <option value="vigas">Vigas de acero</option>
+                  <option value="tubos">Tubos estructurales</option>
+                  <option value="correas">Correas C y Z</option>
+                  <option value="laminados">Laminados de acero</option>
+                  <option value="otro">Otro producto</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Mensaje / Consulta *</label>
+                <textarea id="message" name="message" placeholder="Cuéntenos sobre su proyecto o consulta..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn-submit">
+                Enviar Consulta ✉️
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================
+         MAPA
+         ============================ -->
+    <section class="map-section" aria-label="Mapa de ubicación">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d249755.45826831585!2d-78.70706889999999!3d-0.2298500000000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d59a4002427c9f%3A0x44b991e158ef5572!2sQuito!5e0!3m2!1ses!2sec!4v1711400000000!5m2!1ses!2sec"
+        width="100%"
+        height="380"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Ubicación Ferretería El Constructor en Quito"
+      ></iframe>
+    </section>
+
+  </main>
+
+  <!-- ============================
+       FOOTER
+       ============================ -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="./logo.png" alt="Logo Ferretería El Constructor" />
+        <p>
+          Importadores y distribuidores de aceros, perfiles y materiales de
+          construcción en Quito, Ecuador. Calidad y confianza desde hace más de 10 años.
+        </p>
+        <div class="footer-social" aria-label="Redes sociales">
+          <a href="mailto:ferreteriaelconstructor54@gmail.com" aria-label="Email" title="Enviar email">
+            📧
+          </a>
+          <a href="https://wa.me/593XXXXXXXXX" aria-label="WhatsApp" title="WhatsApp" target="_blank" rel="noopener noreferrer">
+            💬
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navegación</h4>
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#productos">Productos</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Productos</h4>
+        <ul>
+          <li><a href="#productos">Tejas metálicas</a></li>
+          <li><a href="#productos">Vigas de acero</a></li>
+          <li><a href="#productos">Tubos estructurales</a></li>
+          <li><a href="#productos">Correas C y Z</a></li>
+          <li><a href="#productos">Laminados de acero</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2024 Ferretería El Constructor. Todos los derechos reservados.</span>
+      <span>Hecho con ❤️ en Quito, Ecuador</span>
+    </div>
+  </footer>
+
+  <!-- ============================
+       BOTÓN WHATSAPP FLOTANTE
+       ============================ -->
+  <div class="whatsapp-float" aria-label="Contactar por WhatsApp">
+    <a
+      href="https://wa.me/593XXXXXXXXX?text=Hola%2C%20me%20gustaría%20más%20información%20sobre%20sus%20productos"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Enviar mensaje por WhatsApp"
+      title="Chatea con nosotros en WhatsApp"
+    >
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+      </svg>
+    </a>
+  </div>
+
+  <!-- ============================
+       SCRIPTS
+       ============================ -->
+  <script>
+    // Toggle de navegación móvil
+    const navToggle = document.getElementById('navToggle');
+    const navMenu = document.getElementById('navMenu');
+
+    navToggle.addEventListener('click', function () {
+      const isOpen = navMenu.classList.toggle('open');
+      navToggle.classList.toggle('active', isOpen);
+      navToggle.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    // Cerrar menú al hacer click en un enlace
+    navMenu.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        navMenu.classList.remove('open');
+        navToggle.classList.remove('active');
+        navToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Validación básica del formulario de contacto
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      var name = document.getElementById('name').value.trim();
+      var phone = document.getElementById('phone').value.trim();
+      var message = document.getElementById('message').value.trim();
+
+      if (!name || !phone || !message) {
+        alert('Por favor, complete los campos obligatorios: Nombre, Teléfono y Mensaje.');
+        return;
+      }
+
+      var product = document.getElementById('product').value;
+      var email = document.getElementById('email').value.trim();
+
+      var waMessage = 'Hola, soy ' + name + '.\n'
+        + 'Teléfono: ' + phone + '\n'
+        + (email ? 'Email: ' + email + '\n' : '')
+        + (product ? 'Producto de interés: ' + product + '\n' : '')
+        + 'Consulta: ' + message;
+
+      var waUrl = 'https://wa.me/593XXXXXXXXX?text=' + encodeURIComponent(waMessage);
+      window.open(waUrl, '_blank', 'noopener,noreferrer');
+    });
+  </script>
+
 </body>
 </html>
